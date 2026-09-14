@@ -107,6 +107,50 @@ Input	Processing	Output
    f. Total_Revenue += Guest_Price.
    
 2. Output Total_Revenue after loop.	• Guest_Final_Price (for each guest)
+
    
+   5. pseudocode:
+      
+begin
+
+    set total_hotel_revenue = 0
+    
+    read n
+    
+    for i from 1 to n do
+    
+        read season, room_type, nights_stayed
+        
+        
+        if season == "peak" then
+            if room_type == "standard" then
+                set base_rate = 5000
+            else if room_type == "deluxe" then
+                set base_rate = 8000
+            else if room_type == "suite" then
+                set base_rate = 12000
+            end if
+        else if season == "off-peak" then
+            if room_type == "standard" then
+                set base_rate = 3000
+            else if room_type == "deluxe" then
+                set base_rate = 5000
+            else if room_type == "suite" then
+                set base_rate = 8000
+            end if
+        end if
+        
+        set gross_amount = base_rate * nights_stayed
+        
+        if nights_stayed > 7 then
+            set discount = 0.15 * gross_amount
+        else
+            set discount = 0.0
+        end if
+      set guest_final_price = gross_amount - discount
+        print "guest ", i, " total price: rs. ", guest_final_price
+        set total_hotel_revenue = total_hotel_revenue + guest_final_price
+    end for
+
 • Total_Hotel_Revenue (final total)
 
