@@ -5,10 +5,15 @@ Input a year and determine whether it is a leap year. (Rule: divisible by 4 AND 
 ALGORITHM:
 
 1. Start
+   
 2.input Y (Year)
+
 3. condition (Y% 4 == 0) AND (Y % 100!= 0 OR Y %400 ==0).
+   
 4 If condition is TRUE, output "Y is a Leap Year".
+
 5. Else (condition is FALSE), output "Y is not a Leap Year".
+   
 6 End..	
 
 
