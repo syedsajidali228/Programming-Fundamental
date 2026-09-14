@@ -19,16 +19,26 @@ Output the value of i.
 
 
 Pseudo Code:
+
 	
 begin
+
 read n
+
 if n < 1then
+
 print "error: n must be greater than or equal to 1"
+
 else
+
 for i from n down to 1 do
+
 print i
+
 end for
+
 end if
+
 end.
 
 
