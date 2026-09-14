@@ -1,1 +1,112 @@
+Question 01: Hotel Booking System
+
+1. Algorithm
+   
+Step 1: Start.
+
+Step 2: Initialize Total_Hotel_Revenue = 0.0.
+
+Step 3: Read total number of guests N (e.g., N = 4).
+
+Step 4: Set loop counter i = 1.
+
+Step 5: If i > N, go to Step 16 (exit loop).
+
+Step 6: Read Season ('Peak' or 'Off-Peak'), Room_Type ('Standard', 'Deluxe', or 'Suite'), and Nights_Stayed.
+
+Step 7: Check Season condition:
+
+        If Season == 'Peak':
+        
+            If Room_Type == 'Standard', set Base_Rate = 5000.
+            
+            Else if Room_Type == 'Deluxe', set Base_Rate = 8000.
+            
+            Else if Room_Type == 'Suite', set Base_Rate = 12000.
+            
+        Else if Season == 'Off-Peak':
+        
+            If Room_Type == 'Standard', set Base_Rate = 3000.
+            
+            Else if Room_Type == 'Deluxe', set Base_Rate = 5000.
+            
+            Else if Room_Type == 'Suite', set Base_Rate = 8000.
+            
+Step 8: Calculate Gross_Amount = Base_Rate * Nights_Stayed.
+
+Step 9: Initialize Discount = 0.0.
+
+Step 10: If Nights_Stayed > 7, set Discount = 0.15 * Gross_Amount.
+
+Step 11: Calculate Guest_Final_Price = Gross_Amount - Discount.
+
+Step 12: Display Guest_Final_Price for Guest i.
+
+Step 13: Update Total_Hotel_Revenue = Total_Hotel_Revenue + Guest_Final_Price.
+
+Step 14: Increment loop counter i = i + 1.
+
+Step 15: Go to Step 5.
+
+Step 16: Display Total_Hotel_Revenue.
+
+Step 17: End.
+
+
+3. Problem Analysis Chart (PAC)
+4. 
+Given Data / Inputs	Processing & Operations	Required Output	Constraints & Rules
+
+• N (Total Guests)
+
+• Season (Peak/Off-Peak)
+
+• Room Type (Standard/Deluxe/Suite)
+
+• Nights Stayed	1. Base rate selection via nested season & room type check.
+
+2. Gross = Base Rate × Nights.
+3. 
+4. Discount = 15% of Gross if Nights > 7; else 0.
+5. 
+6. Guest Price = Gross - Discount.
+7. 
+8. Total Revenue = ∑ Guest Price.	• Individual Guest Final Price
+9. 
+• Total Hotel Revenue	• Loop executes for N guests.
+
+• Peak Rates: Standard=5000, Deluxe=8000, Suite=12000.
+
+• Off-Peak Rates: Standard=3000, Deluxe=5000, Suite=8000.
+
+• 15% discount strictly for Nights > 7.
+
+
+3. Input-Process-Output (IPO) Chart
+   
+Input	Processing	Output
+
+• N (Integer)
+
+• Season (String)
+
+• Room_Type (String)
+
+• Nights_Stayed (Integer)	1. Loop i from 1 to N:
+
+   a. Input Season, Room_Type, Nights.
+   
+   b. Determine Base_Rate based on Season and Room_Type.
+   
+   c. Compute Gross = Base_Rate * Nights.
+   
+   d. If Nights > 7, Discount = 0.15 * Gross; else 0.
+   
+   e. Guest_Price = Gross - Discount.
+   
+   f. Total_Revenue += Guest_Price.
+   
+2. Output Total_Revenue after loop.	• Guest_Final_Price (for each guest)
+   
+• Total_Hotel_Revenue (final total)
 
