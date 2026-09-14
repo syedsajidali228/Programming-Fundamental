@@ -1,4 +1,5 @@
-Question 1\n
+Question 1
+
 Take a number N and print numbers from N down to 1.
 
 Algorithm:
