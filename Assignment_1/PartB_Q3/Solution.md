@@ -41,83 +41,15 @@ Step 16: Go to Step 4.
 
 Step 17: End.
 
-3. Problem Analysis Chart (PAC)
-   
-Given Data / Inputs	processing & Operations	Required Output	Constraints & Rules
 
-• N (Total students)
+### 2. Problem Analysis Chart (PAC)
 
-• 5 subject marks per student (out of 100)	1. Inner loop: Read 5 marks, compute sum, check if any mark < 33.
+| Given Data / Inputs | Processing & Operations | Required Output | Constraints & Rules |
+| :--- | :--- | :--- | :--- |
+| • `N` (Total students)<br>• 5 subject marks per student (out of 100) | 1. Inner loop: Read 5 marks, compute sum, check if any mark < 33.<br>2. `Average = sum_marks / 5.0`.<br>3. Override Check: If any `mark < 33` → "Fail — Subject Deficiency".<br>4. If no deficiency: `Avg >= 80` → "Distinction", `Avg >= 60` → "Pass", Else → "Fail". | • Total marks sum<br>• Calculated average<br>• Classification grade per student | • `N` students processed in outer loop.<br>• 5 subjects per student in inner loop.<br>• Passing mark per subject is 33.<br>• Subject deficiency overrides high average. |
 
-2. Average = sm / 5.0.
-   
-4. Override Check: If any mark < 33 -> 'Fail - Subject Deficiency'.
-   
-6. If no deficiency: Avg >= 80 -> 'Distinction', Avg >= 60 -> 'Pass', Else -> 'Fail'.	• Total marks sum
-   
-• Calculated average
+### 3. Input-Process-Output (IPO) Chart
 
-• Classification grade per student	• N students processed in outer loop.
-
-• 5 subjects per student in inner loop.
-
-• Passing mark per subject is 33.
-
-• Subject deficiency overrides high average.
-
-3. Input-Process-Output (IPO) Chart
-   
-Input	Processing	Output
-
-• n (integer)
-
-• mark1, mark2, mark3, mark4, mark5 (floats/integers)	1. outer loop student =1 to n:
-
-   a. sum = 0, deficiency = 0.
-   
-   b. inner loop subj = 1 to 5:
-   
-      - input mrks
-      - sum += mark.
-      - if mark < 33 then deficiency = 1.
-      
-   c. avg = sum / 5.0.
-   
-   d. if deficiency == 1 then status = 'fail - subject deficiency'
-   
-      else if avg >= 80 then status = 'distinction'
-      else if avg >= 60 then status = 'pass'
-      else status = 'fail'.	• student average
-      
-• classification status per student
-
-6. Pseudocode
-   
-begin
-
-    read n
-    for student_count from 1 to n do
-        set su_marks = 0
-        set has_deficiency = 0
-        
-        for subj_count from 1 to 5 do
-            read mark
-            set sum_marks = sum_marks + mark
-            if mark < 33 then
-                set has_deficiency = 1
-            end if
-        end for
-      set average = sum_marks / 5.0
-        
-        if has_deficiency == 1 then
-           print "result: fail - subject deficiency"
-        else if average >= 80 then
-            print "result: distinction"
-        else if average >= 60 then
-            print result: pass"
-        else
-            print "result: fail"
-        end if
-    end for
-end
-
+| Input | Processing | Output |
+| :--- | :--- | :--- |
+| • `N` (Integer)<br>• `mark1, mark2, mark3, mark4, mark5` (Integers) | 1. **Outer loop `student` = 1 to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. `sum = 0`, `deficiency = 0`.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. **Inner loop `subj` = 1 to 5**:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Read `mark`.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- `sum += mark`.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- IF `mark < 33` THEN `deficiency = 1`.<br>&nbsp;&nbsp;&nbsp;&nbsp;c. `avg = sum / 5.0`.<br>&nbsp;&nbsp;&nbsp;&nbsp;d. IF `deficiency == 1` THEN `status = "Fail — Subject Deficiency"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE IF `avg >= 80` THEN `status = "Distinction"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE IF `avg >= 60` THEN `status = "Pass"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE `status = "Fail"`. | • Student average<br>• Classification status per student |
