@@ -50,143 +50,15 @@ Step 13: Generate Parking Summary Report:
         
 Step 14: End.
 
-3. Problem Analysis Chart (PAC)
-   
-Given Data / Inputs	Processing & Operations	Required Output	Constraints & Rules
 
-• n (total expected vehicles)
+### 2. Problem Analysis Chart (PAC)
 
-• vehicle type (c/b/v)
+| Given Data / Inputs | Processing & Operations | Required Output | Constraints & Rules |
+| :--- | :--- | :--- | :--- |
+| • `N` (Total expected vehicles)<br>• `v_type` (C/B/V)<br>• `category` (F/S/G)<br>• `permit` (Y/N)<br>• `emergency` (Y/N) | 1. Input validation loop.<br>2. Faculty → Zone A (Cap: 20), Student → Zone B (Cap: 40), Visitor → Zone C (Cap: 15).<br>3. Student Van → Zone C. Visitor Van → Zone C (requires 2 spaces).<br>4. Emergency status overrides missing permit.<br>5. Update zone occupancy and counters. | • Assigned zone & remaining capacity<br>• Rejection reason (if rejected)<br>• Final summary report (total, accepted, rejected, counts by type, zone occupancies, highest occupancy zone, facility full status) | • Zone A: 20 max | Zone B: 40 max | Zone C: 15 max.<br>• Visitor Van consumes 2 parking spaces.<br>• Input validation repeats until valid input is given. |
 
-• user category (f/s/g)
+### 3. Input-Process-Output (IPO) Chart
 
-• valid permit (y/n)
-
-• emergency status (y/n)	1. repeated validation loop.
-
-2. rules: faculty->zone a (cap 20), student->zone b (cap 40), visitor->zone c (cap 15).
-   
-4. vn rules: faculty van->zone a if space; student van->zone c if space; visitor van->zone c if >=2 spaces free.
-   
-6. emergency override allows entry regardless of permit.
-   
-8. capacity updates & counter increments.	• assigned zone & remaining capacity
-   
-• rejection reason (if rejected)
-
-• final summary: total processed, accepted, rejected, counts by type, zone occupancies, highest occupancy zone, facility full status.	• zone a: 20 max, zone b: 40 max, zone c: 15 max.
-
-• visitor van consumes 2 spaces.
-
-• input validation repeat until valid.
-
-3. Input-Process-Output (IPO) Chart
-   
-Input	Processing	Output
-
-• n (integer)
-
-• type ('c','b','v')
-
-• category ('f','s','g')
-
-• permit ('y','n')
-
-• emergency ('y','n')	1. initialize cap_a=20, cap_b=40, cap_c=15, occ_a=occ_b=occ_c=0.
-
-2. loop 1 to n:
-   
-   a. input & validate type, category, permit.
-   
-   b. evaluate zone eligibility & space requirement (1 space for c/b, 2 for c-van).
-   
-   c. if space exists -> allocate, occ+=spaces, increment type counter.
-   
-   d. else -> reject, increment reject counter.
-   
-4. compute highest occupancy zone & full status.	• individual parking assignment / rejection notice
-   
-• comprehensive parking summary report
-
-
- 
-7. Pseudocode
-   
-begin
-
-    set cap_a = 20, occ_a = 0
-    set cap_b = 40, occ_b = 0
-    set ca_c = 15, occ_c = 0
-    set count_cars = 0, count_bikes = 0, count_vans = 0
-    set count_accepted = 0, count_rejected = 0
-    
-    read n
-    for i from 1 to n do
-        // input validation loop
-        repeat
-            read v_type, category, permit
-        until v_type in ['c','b','v'] and category in ['f','s','g'] and permit in ['y','n']
-        
-        set is_allowed = false
-        if permit == 'n' then
-            reademergency
-            if emergency == 'y' then
-                set is_allowed = true
-            end if
-        else
-            set is_allowed = true
-        end if
-        
-        if is_allowed == false then
-            print "rejected: invalid permit"
-            set count_rejected = count_rejected + 1
-        else
-            // zone allocation logic
-            if category == 'f' then
-                if occ_a < cap_a then
-                    set occ_a = occ_a + 1
-                    set count_accepted = count_accepted + 1
-                    print "assigned: zone a. remaining: ", (cap_a - occ_a)
-                else
-                    print "rejected: zone a full"
-                    set count_rejected = count_rejected + 1
-                end if
-            else if category == 's' then
-                if v_type == 'v' then
-                    if occ_c < cap_c then
-                        set occ_c = occ_c + 1
-                        set count_accepted = count_accepted + 1
-                        print "assigned: zon c (student van). remaining: ", (cap_c - occ_c)
-                    else
-                        print "rejected: zone c full for student van"
-                        set count_rejected = count_rejected + 1
-                    end if
-                else
-                    if occ_b < cap_b then
-                        set occ_b = occ_b + 1
-                        set count_accepted= count_accepted + 1
-                        print "assigned: zone b. remaining: ", (cap_b - occ_b)
-                    else
-                        print "rejected: zone b full"
-                        set count_rejected = count_rejected + 1
-                    end if
-                end if
-            else if category == 'g' then
-                set space_req = 1
-                if v_type == 'v' then set space_req = 2 end if
-                if (cap_c - occ_c) >= space_req then
-                    set occ_c = occ_c + space_req
-                    set count_accepted = count_accepted + 1
-                    print "assigned: zone c. remaining: ", (cap_c - occ_c)
-                else
-                    print "rejected: insufficient space in zone c"
-                    set count_rejected = count_rejected + 1
-                end if
-            end if
-        end if
-    end for
-    
-    print "=== parking summary report ==="
-    print "total processed ", n, " | accepted: ", count_accepted, " | rejected: ", count_rejected
-end
-
+| Input | Processing | Output |
+| :--- | :--- | :--- |
+| • `N` (Integer)<br>• `v_type` ('C','B','V')<br>• `category` ('F','S','G')<br>• `permit` ('Y','N')<br>• `emergency` ('Y','N') | 1. Initialize `Cap_A=20, Cap_B=40, Cap_C=15`, occupancies to 0.<br>2. **Loop `1` to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. Input and validate inputs.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. Evaluate permit/emergency eligibility.<br>&nbsp;&nbsp;&nbsp;&nbsp;c. Evaluate zone eligibility & space requirement (1 space for C/B, 2 for Visitor Van).<br>&nbsp;&nbsp;&nbsp;&nbsp;d. If space exists → allocate, update occupancy & counters.<br>&nbsp;&nbsp;&nbsp;&nbsp;e. Else → reject, update reject counter.<br>3. Generate summary report after loop. | • Individual parking assignment / rejection notice<br>• Comprehensive parking summary report |
