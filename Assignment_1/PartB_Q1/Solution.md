@@ -154,3 +154,17 @@ begin
 
 • Total_Hotel_Revenue (final total)
 
+
+### 2. Problem Analysis Chart (PAC)
+
+| Given Data / Inputs | Processing & Operations | Required Output | Constraints & Rules |
+| :--- | :--- | :--- | :--- |
+| • `N` (Total Guests)<br>• `Season` (Peak/Off-Peak)<br>• `Room_Type` (Standard/Deluxe/Suite)<br>• `Nights_Stayed` | 1. Select base rate using nested season and room type check.<br>2. `Gross = Base_Rate * Nights_Stayed`.<br>3. `Discount = 15%` of Gross if `Nights_Stayed > 7`; else `0`.<br>4. `Guest_Price = Gross - Discount`.<br>5. `Total_Revenue = ∑ Guest_Price`. | • Individual Guest Final Price<br>• Total Hotel Revenue | • Loop processes `N` guests.<br>• **Peak Rates**: Standard = 5000, Deluxe = 8000, Suite = 12000.<br>• **Off-Peak Rates**: Standard = 3000, Deluxe = 5000, Suite = 8000.<br>• 15% discount strictly applies when `Nights_Stayed > 7`. |
+
+### 3. Input-Process-Output (IPO) Chart
+
+| Input | Processing | Output |
+| :--- | :--- | :--- |
+| • `N` (Integer)<br>• `Season` (String)<br>• `Room_Type` (String)<br>• `Nights_Stayed` (Integer) | 1. Initialize `Total_Hotel_Revenue = 0`.<br>2. **Loop `i` from 1 to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. Read `Season`, `Room_Type`, `Nights_Stayed`.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. Determine `Base_Rate`.<br>&nbsp;&nbsp;&nbsp;&nbsp;c. Compute `Gross = Base_Rate * Nights_Stayed`.<br>&nbsp;&nbsp;&nbsp;&nbsp;d. If `Nights_Stayed > 7`, `Discount = 0.15 * Gross`; else `0`.<br>&nbsp;&nbsp;&nbsp;&nbsp;e. `Guest_Price = Gross - Discount`.<br>&nbsp;&nbsp;&nbsp;&nbsp;f. `Total_Hotel_Revenue += Guest_Price`.<br>3. Display `Total_Hotel_Revenue` after loop. | • `Guest_Final_Price` (per guest)<br>• `Total_Hotel_Revenue` (final total) |
+
+
