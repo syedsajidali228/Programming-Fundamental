@@ -28,68 +28,16 @@ Step 10: Go to Step 5.
 
 Step 11: End.
 
-3. Problem Analysis Chart (PAC)
-   
-Given Data / Inputs	Processing & Operations	Required Output	Constraints & Rules
+### 2. Problem Analysis Chart (PAC)
 
-• Initial floor = 0
+| Given Data / Inputs | Processing & Operations | Required Output | Constraints & Rules |
+| :--- | :--- | :--- | :--- |
+| • Initial floor = 0<br>• `N` (Total requests)<br>• `requested_floor` (for each request) | 1. Compare `requested_floor` with `current_floor` for each request.<br>2. `requested > current` → Print "Moving Up".<br>3. `requested < current` → Print "Moving Down".<br>4. `requested == current` → Print "Doors Opening".<br>5. Update `current_floor = requested_floor` after each stop. | • Direction message for each stop ("Moving Up", "Moving Down", "Doors Opening")<br>• Updated current floor status | • Elevator always starts at Floor 0.<br>• Process requests sequentially one by one in a loop.<br>• List of `N` floor requests. |
 
-• N (Total requests)
+### 3. Input-Process-Output (IPO) Chart
 
-• requested_floor (for each request)	1. For each request, compare requested_floor with current_floor.
+| Input | Processing | Output |
+| :--- | :--- | :--- |
+| • `N` (Integer, total requests)<br>• `requested_floor` (Integer sequence) | 1. Set `current_floor = 0`.<br>2. **Loop `i` from 1 to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. Read `requested_floor`.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. IF `requested_floor > current_floor` → Output "Moving Up".<br>&nbsp;&nbsp;&nbsp;&nbsp;c. ELSE IF `requested_floor < current_floor` → Output "Moving Down".<br>&nbsp;&nbsp;&nbsp;&nbsp;d. ELSE → Output "Doors Opening".<br>&nbsp;&nbsp;&nbsp;&nbsp;e. Set `current_floor = requested_floor`. | • Direction status string per request ("Moving Up" / "Moving Down" / "Doors Opening") |
 
-2. If requested > current -> Print 'Moving Up'.
-   
-4. If requested < current -> Print 'Moving Down'.
-   
-6. If requested == current -> Print 'Doors Opening'.
-   
-8. Update current_floor = requested_floor after each stop.	• Direction message for each stop ('Moving Up', 'Moving Down', or 'Doors Opening')
-   
-• Updated current_floor status	• Elevator starts at Floor 0.
-
-• Process requests sequentially one by one in a loop.
-
-• List of N requests (e.g., 3, 1, 5, 2, 2).
-
-
-3. Input-Process-Output (IPO) Chart
-   
-Input	Processing	Output
-
-• N (Integer, number of requests)
-
-• requested_floor (Integer sequence)	1. Set current_floor = 0.
-
-2. Loop i from 1 to N:
-   
-   a. Read requested_floor.
-   
-   b. IF requested_floor > current_floor -> Output 'Moving Up'.
-   
-   c. ELSE IF requested_floor < current_floor -> Output 'Moving Down'.
-   
-   d. ELSE -> Output 'Doors Opening'.
-   
-   e. Set current_floor = requested_floor.	• Status string per request: 'Moving Up', 'Moving Down', or 'Doors Opening'
-   
- 
-6. Pseudocode
-   
-begin
-
-    set current_floor= 0
-    read n
-    for i from 1 to n do
-        read requested_floor
-       if requested_floor > current_floor then
-            print "moving up"
-        else if requested_floor < current_floor then
-            print "moving down"
-        else
-            print "doors opening"
-        end if
-        set current_floor = requested_floor
-    end for
-end
 
