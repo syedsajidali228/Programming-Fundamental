@@ -1,6 +1,9 @@
 Name: Syed Sajid Ali
+
 Roll No: 26k-0013
-Sections: BAI-1A
+
+Section: BAI-1A
+
 
 
 
@@ -79,4 +82,11 @@ end
 
 Legends:
 temp = Temporary Number
+
+
+
+<img width="1920" height="1515" alt="Q3_PartA-1" src="https://github.com/user-attachments/assets/5bf437a9-391c-42cb-9a6d-8e5fcdda5683" />
+
+<img width="1920" height="1440" alt="Q3_PartA-2" src="https://github.com/user-attachments/assets/d1743be0-294d-4be0-9d64-a553919a5465" />
+
 
