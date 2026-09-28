@@ -1,3 +1,11 @@
+Name: Syed Sajid Ali
+
+Roll No: 26k-0013
+
+Section: BAI-1A
+
+
+
 Question 03: Class Result Processing
 
 1. Algorithm
