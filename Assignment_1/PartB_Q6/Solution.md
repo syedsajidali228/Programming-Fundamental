@@ -78,3 +78,11 @@ Step 11: End.
 | Input | Processing | Output |
 | :--- | :--- | :--- |
 | • `v_type` ('E','H')<br>• `soc`, `req_soc` (Floats)<br>• `duration` (Float)<br>• `time_24` (Integer)<br>• `member`, `disabled`, `station` ('Y','N') | 1. IF `station == 'N'` OR (`v_type == 'H'` AND `soc >= 40`) OR `req_soc <= soc` → `charging_eligible = FALSE`.<br>2. Evaluate Priority: P1, P2, or P3.<br>3. Rate calculation: Peak (17-22h) = 50, Off-Peak = 35. Member discount = 10% peak, 20% off-peak (except P1).<br>4. Parking fee calculation: <=2h: 200, <=5h: 400, >5h: 700. Disabled = free, Member = 20% discount.<br>5. `Total_Payable = Final_Charging + Final_Parking`. | • Complete EV Charging & Parking Summary Invoice Receipt |
+
+
+
+<img width="1324" height="632" alt="Q6_PartB_PC-4" src="https://github.com/user-attachments/assets/9a43b483-45ac-426d-b435-9dea7c48c818" />
+<img width="1344" height="1496" alt="Q6_PartB_PC-3" src="https://github.com/user-attachments/assets/c8c878b6-5165-487f-bf05-056099910553" />
+<img width="1376" height="1560" alt="Q6_PartB_PC-2" src="https://github.com/user-attachments/assets/cdb89d90-c915-4989-a5df-bd967ce596d5" />
+<img width="1920" height="1657" alt="Q6_PartB_PC-1" src="https://github.com/user-attachments/assets/5b7369ac-da0c-4768-83c6-b40c2e1a898c" />
+
