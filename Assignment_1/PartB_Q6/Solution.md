@@ -81,8 +81,9 @@ Step 11: End.
 
 
 
-<img width="1324" height="632" alt="Q6_PartB_PC-4" src="https://github.com/user-attachments/assets/9a43b483-45ac-426d-b435-9dea7c48c818" />
-<img width="1344" height="1496" alt="Q6_PartB_PC-3" src="https://github.com/user-attachments/assets/c8c878b6-5165-487f-bf05-056099910553" />
-<img width="1376" height="1560" alt="Q6_PartB_PC-2" src="https://github.com/user-attachments/assets/cdb89d90-c915-4989-a5df-bd967ce596d5" />
 <img width="1920" height="1657" alt="Q6_PartB_PC-1" src="https://github.com/user-attachments/assets/5b7369ac-da0c-4768-83c6-b40c2e1a898c" />
+<img width="1376" height="1560" alt="Q6_PartB_PC-2" src="https://github.com/user-attachments/assets/cdb89d90-c915-4989-a5df-bd967ce596d5" />
+<img width="1344" height="1496" alt="Q6_PartB_PC-3" src="https://github.com/user-attachments/assets/c8c878b6-5165-487f-bf05-056099910553" />
+<img width="1324" height="632" alt="Q6_PartB_PC-4" src="https://github.com/user-attachments/assets/9a43b483-45ac-426d-b435-9dea7c48c818" />
+
 
