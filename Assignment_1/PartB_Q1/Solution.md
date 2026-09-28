@@ -1,3 +1,11 @@
+Name: Syed Sajid Ali
+
+Roll No: 26k-0013
+
+Sections: BAI-1A
+
+
+
 Question 01: Hotel Booking System
 
 1. Algorithm
