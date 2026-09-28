@@ -1,3 +1,4 @@
+
 Name: Syed Sajid Ali
 
 Roll No: 26k-0013
@@ -77,4 +78,12 @@ Step 17: End.
 
 
 <img width="1292" height="1588" alt="Q1_PartB" src="https://github.com/user-attachments/assets/b6a23ba7-260e-4ed2-86b5-91b19a7f6c6e" />
+
+<img width="8160" height="6120" alt="Q1_PartB_PC" src="https://github.com/user-attachments/assets/8debad19-0cc4-4d41-b71f-5270c09901e6" />
+
+<img width="6120" height="8160" alt="Q1_PartB_FC-1" src="https://github.com/user-attachments/assets/06840b39-5869-4077-8907-e033e2324a62" />
+
+<img width="1260" height="1728" alt="Q1_PartB_FC-2" src="https://github.com/user-attachments/assets/b4fa950b-2f02-40a9-92cd-94969ef25b5a" />
+
+<img width="1472" height="2268" alt="Q1_PartB_FC-3" src="https://github.com/user-attachments/assets/1e17180b-ed17-43e9-9512-6aa2ef0acd7a" />
 
