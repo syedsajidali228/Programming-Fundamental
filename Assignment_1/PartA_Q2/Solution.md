@@ -1,3 +1,8 @@
+Name: Syed Sajid Ali
+Roll No: 26k-0013
+Sections: BAI-1A
+
+
 Question 2
 
 Input a year and determine whether it is a leap year. (Rule: divisible by 4 AND (not divisible by 100 OR divisible by 400).)
