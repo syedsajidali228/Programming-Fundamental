@@ -1,6 +1,8 @@
 Name: Syed Sajid Ali
+
 Roll No: 26k-0013
-Sections: BAI-1A
+
+Section: BAI-1A
 
 
 
@@ -56,4 +58,7 @@ end for
 end for
 
 end
+
+
+<img width="3216" height="2440" alt="Q4_PartA" src="https://github.com/user-attachments/assets/10284582-b797-4491-9c1d-61e81bf25474" />
 
