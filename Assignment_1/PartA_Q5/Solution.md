@@ -2,7 +2,7 @@ Name: Syed Sajid Ali
 
 Roll No: 26k-0013
 
-Sections: BAI-1A
+Section: BAI-1A
 
 
 
@@ -71,5 +71,9 @@ end while
 PRINT "final single digit: ", current
 
 end
+
+
+
+<img width="1304" height="1320" alt="Q5_PartA" src="https://github.com/user-attachments/assets/84cc7f5c-6963-4971-b5d3-9961e852147f" />
 
 
