@@ -48,3 +48,8 @@ Step 11: End.
 | • `N` (Integer, total requests)<br>• `requested_floor` (Integer sequence) | 1. Set `current_floor = 0`.<br>2. **Loop `i` from 1 to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. Read `requested_floor`.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. IF `requested_floor > current_floor` → Output "Moving Up".<br>&nbsp;&nbsp;&nbsp;&nbsp;c. ELSE IF `requested_floor < current_floor` → Output "Moving Down".<br>&nbsp;&nbsp;&nbsp;&nbsp;d. ELSE → Output "Doors Opening".<br>&nbsp;&nbsp;&nbsp;&nbsp;e. Set `current_floor = requested_floor`. | • Direction status string per request ("Moving Up" / "Moving Down" / "Doors Opening") |
 
 
+<img width="1052" height="1404" alt="Q2_PartB_PC" src="https://github.com/user-attachments/assets/46722792-7274-491f-936d-25b25f2ccaa6" />
+
+<img width="6120" height="8160" alt="Q2_PartB_FC-1" src="https://github.com/user-attachments/assets/8326a01b-4df0-49a9-96c7-d85ca60dd013" />
+
+<img width="6120" height="8160" alt="Q2_PartB_FC-2" src="https://github.com/user-attachments/assets/3bbbef2d-a399-4f97-b033-da964533e792" />
