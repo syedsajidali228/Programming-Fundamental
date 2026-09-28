@@ -1,6 +1,10 @@
+
 Name: Syed Sajid Ali
+
 Roll No: 26k-0013
+
 Sections: BAI-1A
+
 
 
 Question 2
@@ -41,3 +45,5 @@ end if
 
 end.
 
+
+<img width="1920" height="1111" alt="Q2_PartA" src="https://github.com/user-attachments/assets/570c5093-bc08-4a32-9b4b-5baaf8cedc32" />
