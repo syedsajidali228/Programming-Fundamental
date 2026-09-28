@@ -44,3 +44,10 @@ Step 8: End.
 | Input | Processing | Output |
 | :--- | :--- | :--- |
 | • `quantity` (`q`: Integer)<br>• `price` (`p`: Float)<br>• `discount_percent` (`d`: Float)<br>• `tax_percent` (`t`: Float) | 1. IF `q <= 0 OR p <= 0 OR d < 0 OR d > 100 OR t < 0` THEN display error and terminate.<br>2. `s = q * p`<br>3. `a = s - (s * d) / 100.0`<br>4. `final_bill = a + (a * t) / 100.0`<br>5. Display itemized receipt. | • Subtotal (`s`)<br>• Discounted Amount (`a`)<br>• Final Bill Amount |
+
+
+
+
+<img width="1236" height="1292" alt="Q4_PartB_PC" src="https://github.com/user-attachments/assets/de9a06d2-5d8e-47ce-977b-f65030e6cc2a" />
+<img width="6120" height="8160" alt="Q4_PartB_FC" src="https://github.com/user-attachments/assets/5647d150-beb3-4bda-b435-1225362c39fe" />
+
