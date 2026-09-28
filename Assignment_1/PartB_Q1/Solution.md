@@ -75,3 +75,6 @@ Step 17: End.
 | • `N` (Integer)<br>• `Season` (String)<br>• `Room_Type` (String)<br>• `Nights_Stayed` (Integer) | 1. Initialize `Total_Hotel_Revenue = 0`.<br>2. **Loop `i` from 1 to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. Read `Season`, `Room_Type`, `Nights_Stayed`.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. Determine `Base_Rate`.<br>&nbsp;&nbsp;&nbsp;&nbsp;c. Compute `Gross = Base_Rate * Nights_Stayed`.<br>&nbsp;&nbsp;&nbsp;&nbsp;d. If `Nights_Stayed > 7`, `Discount = 0.15 * Gross`; else `0`.<br>&nbsp;&nbsp;&nbsp;&nbsp;e. `Guest_Price = Gross - Discount`.<br>&nbsp;&nbsp;&nbsp;&nbsp;f. `Total_Hotel_Revenue += Guest_Price`.<br>3. Display `Total_Hotel_Revenue` after loop. | • `Guest_Final_Price` (per guest)<br>• `Total_Hotel_Revenue` (final total) |
 
 
+
+<img width="1292" height="1588" alt="Q1_PartB" src="https://github.com/user-attachments/assets/b6a23ba7-260e-4ed2-86b5-91b19a7f6c6e" />
+
