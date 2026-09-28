@@ -48,4 +48,6 @@ end if
 end.
 
 
+<img width="6120" height="4706" alt="Q1_PartA" src="https://github.com/user-attachments/assets/5504614f-886b-458f-852c-d574717fc830" />
+
 
