@@ -1,3 +1,9 @@
+Name: Syed Sajid Ali
+Roll No: 26k-0013
+Sections: BAI-1A
+
+
+
 Question 3
 
 Take a number, count how many digits it has, and state whether it is a single-digit, double-digit, or triple-digit (or more) number.
