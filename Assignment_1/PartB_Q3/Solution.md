@@ -61,3 +61,16 @@ Step 17: End.
 | Input | Processing | Output |
 | :--- | :--- | :--- |
 | • `N` (Integer)<br>• `mark1, mark2, mark3, mark4, mark5` (Integers) | 1. **Outer loop `student` = 1 to `N`**:<br>&nbsp;&nbsp;&nbsp;&nbsp;a. `sum = 0`, `deficiency = 0`.<br>&nbsp;&nbsp;&nbsp;&nbsp;b. **Inner loop `subj` = 1 to 5**:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Read `mark`.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- `sum += mark`.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- IF `mark < 33` THEN `deficiency = 1`.<br>&nbsp;&nbsp;&nbsp;&nbsp;c. `avg = sum / 5.0`.<br>&nbsp;&nbsp;&nbsp;&nbsp;d. IF `deficiency == 1` THEN `status = "Fail — Subject Deficiency"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE IF `avg >= 80` THEN `status = "Distinction"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE IF `avg >= 60` THEN `status = "Pass"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSE `status = "Fail"`. | • Student average<br>• Classification status per student |
+
+
+
+<img width="1156" height="1624" alt="Q3_PartB_PC" src="https://github.com/user-attachments/assets/46855bcf-75e9-4ab7-b730-dd16212c4369" />
+
+<img width="1080" height="1704" alt="Q3_PartB_FC-1" src="https://github.com/user-attachments/assets/f3591c9d-957b-4d12-871c-1da6642c1fd7" />
+
+<img width="1188" height="1588" alt="Q3_PartB_FC-2" src="https://github.com/user-attachments/assets/844d993f-7129-41cb-b909-ac03acddca81" />
+
+<img width="1148" height="1768" alt="Q3_PartB_FC-3" src="https://github.com/user-attachments/assets/e3d25edf-1189-40fd-a634-e246a21991a1" />
+
+<img width="448" height="672" alt="Q3_PartB_FC-4" src="https://github.com/user-attachments/assets/60df042d-14af-4ee3-8018-cbee7628f193" />
+
