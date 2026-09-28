@@ -1,3 +1,9 @@
+Name: Syed Sajid Ali
+Roll No: 26k-0013
+Sections: BAI-1A
+
+
+
 Question 1
 
 Take a number N and print numbers from N down to 1.
