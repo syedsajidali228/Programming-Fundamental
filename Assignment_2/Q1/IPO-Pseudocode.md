@@ -8,3 +8,10 @@ IPO CHART (HandWritten)
 
 <img width="3300" height="4460" alt="Q1-Cinema-Hall-Seat-Booking" src="https://github.com/user-attachments/assets/712f741c-9c7b-4cd1-8e91-b2d0b55bc4de" />
 
+## Pseudocode (Handwritten)
+
+![Question 1 pseudocode, page 1](Q-1_Pseudocode_PF_1.jpg)
+
+![Question 1 pseudocode, page 2](Q-1_Pseudocode_PF_2.jpg)
+
+![Question 1 pseudocode, page 3](Q-1_Pseudocode_PF_3.jpg)
