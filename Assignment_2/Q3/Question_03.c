@@ -61,9 +61,21 @@ void analyze_sensor ( int hours, float readings[], int sensor_number, float *ave
 
     *average_output= total / hours;
 
-    printf ( "Sensor %d: Total %.0f | Avg = %.2f | Max = %.0f | Min = %.0f | Critical = %d | Warning = %d | Hot streak = %d\n",
+    printf ( "Sensor %d: Total %.2f | Avg = %.2f | Max = %.0f | Min = %.0f | Critical = %d | Warning = %d | Hot streak = %d\n",
              sensor_number, total, *average_output, maximum, minimum,
              critical_count, warning_count, longest_streak );
+}
+
+int find_highest_average_sensor ( float averages[], int sensors ) {
+    int best_index= 0;
+
+    for (int sensor_index= 1; sensor_index < sensors; sensor_index++) {
+        if (averages[sensor_index] > averages[best_index]) {
+            best_index= sensor_index;
+        }
+    }
+
+    return best_index + 1;
 }
 
 int main ( ) {
@@ -82,21 +94,18 @@ int main ( ) {
     printf ( "Enter temperature readings for each sensor:\n" );
     input_readings ( sensors, hours, temperatures );
 
-    float highest_average= 0;
-    int best_sensor= 1;
+    float averages[sensors];
 
     for (int sensor_index= 0; sensor_index < sensors; sensor_index++) {
         float average= 0;
 
         analyze_sensor ( hours, temperatures[sensor_index], sensor_index + 1, &average );
-
-        if (sensor_index == 0 || average > highest_average) {
-            highest_average= average;
-            best_sensor= sensor_index + 1;
-        }
+        averages[sensor_index]= average;
     }
 
-    printf ( "Highest average: Sensor %d (%.2f)\n", best_sensor, highest_average );
+    int best_sensor= find_highest_average_sensor ( averages, sensors );
+
+    printf ( "Highest average: Sensor %d (%.2f)\n", best_sensor, averages[best_sensor - 1] );
 
     return 0;
 }

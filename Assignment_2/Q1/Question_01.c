@@ -124,18 +124,19 @@ int main ( ) {
 
     if (found == 1) {
         printf ( "Group of %d seated in Row %d, Seats %d to %d\n",
-                 group_size, target_row + 1, start_seat + 1, start_seat + group_size );
+                 group_size, target_row, start_seat, start_seat + group_size - 1 );
 
         // Mark the selected seats as booked
 
         for (int seat_index= start_seat; seat_index < start_seat + group_size; seat_index++) {
             hall[target_row][seat_index]= 1;
         }
+        total_free -= group_size;
 
         printf ( "\nUpdated seating layout (X means booked):\n" );
 
         for (int row_index= 0; row_index < rows; row_index++) {
-            printf ( "R%d  ", row_index + 1 );
+            printf ( "R%d  ", row_index );
 
             for (int seat_index= 0; seat_index < seats; seat_index++) {
                 if (hall[row_index][seat_index] == 1) {
@@ -143,12 +144,13 @@ int main ( ) {
                 }
 
                 else {
-                    printf ( "%d ", seat_index + 1 );
+                    printf ( "_ " );
                 }
             }
 
             printf ( "\n" );
         }
+        printf ( "Remaining free seats: %d\n", total_free );
     }
 
     else {

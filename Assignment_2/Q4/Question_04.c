@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int get_valid_days ( ) {
+int getValidDays ( ) {
     int days;
 
     do {
@@ -22,7 +22,7 @@ int get_valid_days ( ) {
     return days;
 }
 
-float calculate_daily_sales ( int day_number ) {
+float calculateDailySales ( int day_number ) {
     int orders;
 
     printf ( "Day %d - Number of orders: ", day_number );
@@ -61,7 +61,7 @@ float calculate_daily_sales ( int day_number ) {
     return total_sales;
 }
 
-int find_highest_sales_day ( float daily_sales[], int number_of_days ) {
+int findHighestSalesDay ( float daily_sales[], int number_of_days ) {
     int best_day= 1;
     float highest_sales= daily_sales[0];
 
@@ -75,7 +75,7 @@ int find_highest_sales_day ( float daily_sales[], int number_of_days ) {
     return best_day;
 }
 
-void display_bar_chart ( float daily_sales[], int number_of_days ) {
+void displayBarChart ( float daily_sales[], int number_of_days ) {
     printf ( "\nBAR CHART (one * represents Rs. 100):\n" );
 
     for (int day_index= 0; day_index < number_of_days; day_index++) {
@@ -92,22 +92,22 @@ void display_bar_chart ( float daily_sales[], int number_of_days ) {
 }
 
 int main ( ) {
-    int days= get_valid_days ( );
+    int days= getValidDays ( );
     float daily_sales[days];
     float total_festival_sales= 0;
 
     for (int day_index= 0; day_index < days; day_index++) {
-        daily_sales[day_index]= calculate_daily_sales ( day_index + 1 );
+        daily_sales[day_index]= calculateDailySales ( day_index + 1 );
         total_festival_sales += daily_sales[day_index];
     }
 
-    int top_day= find_highest_sales_day ( daily_sales, days );
+    int top_day= findHighestSalesDay ( daily_sales, days );
 
     printf ( "\nFESTIVAL SUMMARY:\n" );
     printf ( "Total sales: Rs. %.2f\n", total_festival_sales );
     printf ( "Top sales day: Day %d\n", top_day );
 
-    display_bar_chart ( daily_sales, days );
+    displayBarChart ( daily_sales, days );
 
     return 0;
 }

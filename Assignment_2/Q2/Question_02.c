@@ -48,5 +48,9 @@ int main ( ) {
 
     printf ( "Total pairs: %d\n", pair_count );
 
+    if (pair_count == 0) {
+        printf ( "No amicable pairs found.\n" );
+    }
+
     return 0;
 }
