@@ -1,14 +1,5 @@
-# Question 7 – Geometric Convex Hull Engine
+# Question 7
 
-## Screenshots
-- Add screenshots of your running program for at least 2 different values here.
+Topic: Geometric Convex Hull Engine
 
-## Code
-- Add your `.c` code file (and any `.h` files) here.
-
-## Mini Report
-- Add photos of your hand-written brainstorming / crude flowcharts.
-- Add photos of your hand-written pseudo-code derived from the flowcharts.
-
-## Topics
-Structures, Type-Tagged Polymorphism, Dynamic Arrays of Structs, File Parsing (CSV format), Computational Geometry.
+Topics: Structures, Type-Tagged Polymorphism, Dynamic Arrays of Structs, File Parsing (CSV format), Computational Geometry.
